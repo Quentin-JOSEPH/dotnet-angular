@@ -68,12 +68,9 @@ namespace industrial
 
                 if (env.IsDevelopment())
                 {
-                    ////////////
                     //Time limit extended
-    spa.Options.StartupTimeout = new TimeSpan(days: 0, hours: 0, minutes: 0, seconds: 30);
-    //Time limit extended
-    //spa.UseAngularCliServer(npmScript: "start");
-                    ///////////
+                    spa.Options.StartupTimeout = new TimeSpan(days: 0, hours: 0, minutes: 0, seconds: 30);
+                    //Time limit extended
 
                     spa.UseAngularCliServer(npmScript: "start");
                 }
