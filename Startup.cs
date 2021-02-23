@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace industrial
 {
@@ -67,6 +68,13 @@ namespace industrial
 
                 if (env.IsDevelopment())
                 {
+                    ////////////
+                    //Time limit extended
+    spa.Options.StartupTimeout = new TimeSpan(days: 0, hours: 0, minutes: 0, seconds: 30);
+    //Time limit extended
+    //spa.UseAngularCliServer(npmScript: "start");
+                    ///////////
+
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
